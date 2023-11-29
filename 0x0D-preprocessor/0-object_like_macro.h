@@ -1,6 +1,11 @@
-#ifndef OBJECT_LIKE_MACRO_H
-#define OBJECT_LIKE_MACRO_H
+#include <stdlib.h>
+int main(void)
+{
+    char *buf = (char *) malloc(1024);
+    if (!buf) {
+        exit(1);
+    }
 
-#define SIZE 1024
-
-#endif
+    free(buf);
+    return 0;
+}
